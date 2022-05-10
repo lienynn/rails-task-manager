@@ -1,8 +1,11 @@
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
 <p><%= @task.completed %></p>
+<ul>
+  <li class="btn"><%= link_to "Delete #{@task.title}",
+                task_path(@task),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %></li>
 
-<%= link_to "Delete #{@task.title}",
-            task_path(@task),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+    <li class="btn"><%= link_to "Update #{@task.title}", edit_task_path(@task) %></li>
+</ul>
