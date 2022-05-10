@@ -4,7 +4,6 @@
     <%# tenery operator to check off boxes that have tasks that are completed %>
       <li><input type="checkbox" <%= task[:completed] ? "checked": " " %>> <%= link_to task[:title], task_path(task) %> </input></li>
     <% end %>
-
 </ul>
 
 <%= link_to "Create new task", tasks_new_path %>
